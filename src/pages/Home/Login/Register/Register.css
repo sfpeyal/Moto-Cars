@@ -1,0 +1,17 @@
+.register-container{
+    height: 680px;
+}
+
+
+.register-container button{
+    border: none;
+    padding: 10px 15px;
+    background-color: rgb(230, 15, 15);
+    font-weight: 790;
+    color: white;
+    border-radius: 5px;
+}
+
+.register-container button:hover{
+    background-color: rgb(197, 103, 103);
+}

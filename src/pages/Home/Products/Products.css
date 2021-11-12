@@ -1,0 +1,18 @@
+/* products style sheet */
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    width: 70%;
+}
+
+/* .main{
+    padding: 100px 0;
+} */
+
+@media only screen and (max-width:688px) {
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+}
