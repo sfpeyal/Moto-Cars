@@ -35,7 +35,7 @@ const Purchase = () => {
             ...orderData,
         }
         // send data to server
-        fetch('http://localhost:5000/orders', {
+        fetch('https://blooming-refuge-66854.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://blooming-refuge-66854.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
