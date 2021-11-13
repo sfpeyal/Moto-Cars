@@ -13,7 +13,7 @@ const Explore = () => {
 
     return (
         <div className="main-container">
-            <h1 className="">Our Products: {products.length}</h1>
+            <h1 className="">ALL PRODUCT</h1>
             <div className="d-flex justify-content-center">
                 <div className="explore-container">
                     {

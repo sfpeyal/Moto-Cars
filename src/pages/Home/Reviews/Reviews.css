@@ -1,9 +1,7 @@
-.best-sales-container{
+.review-container{
     padding-bottom: 100px; 
-    background-color: rgb(233, 231, 231);
 }
 
-.best-sales-container h1{
+.review-container h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }

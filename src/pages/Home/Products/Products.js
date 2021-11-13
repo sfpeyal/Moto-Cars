@@ -11,7 +11,7 @@ const Products = () => {
     }, [])
     return (
         <div className="main-container">
-            <h1 className="py-5">Our Products: {products.length}</h1>
+            <h1 className="py-5">OUR PRODUCTS</h1>
             <div className="d-flex justify-content-center">
                 <div className="products-container">
                     {

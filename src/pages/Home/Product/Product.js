@@ -10,12 +10,14 @@ const Product = (props) => {
             <div>
                 <img className="product-img" src={picture} alt="" />
             </div>
-            <div>
-                <h3>{name}</h3>
-                <h5>Price: {price}$</h5>
-                <p>Shot info: {info.slice(0, 35)}</p>
+            <div className="inner-container">
+                <br />
+                <h5>{name}</h5>
+                <h6>Price: {price}$</h6>
+                <h6>Short description:</h6>
+                <p>"{info.slice(0, 75)}"</p>
                 <Link to={`/products/purchase/${_id}`}>
-                    <button type="button" className="btn btn-outline-danger">PURCHASE</button>
+                    <button type="button" className="btn btn-outline-dark">PURCHASE</button>
                 </Link>
             </div>
         </div>

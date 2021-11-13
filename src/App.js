@@ -10,6 +10,7 @@ import Purchase from './pages/Purchase/Purchase';
 import Footer from './pages/Shared/Footer/Footer';
 import Navigation from './pages/Shared/Navigation/Navigation';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import Error from './pages/Error/Error';
 
 function App() {
   return (
@@ -33,12 +34,15 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/products/purchase/:id">
               <Purchase></Purchase>
             </PrivateRoute>
+            <Route path="*">
+              <Error></Error>
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>

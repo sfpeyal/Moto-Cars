@@ -5,7 +5,10 @@
     grid-column-gap: 15px;
     width: 70%;
 }
+.main-container h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
 /* .main{
     padding: 100px 0;
 } */

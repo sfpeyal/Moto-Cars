@@ -5,8 +5,16 @@
     margin-top: 15px;
     border-radius: 5px;
 }
+.exploreitems-container h5{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
 .exploreitems-img{
     width: 350px;
     height: 250px;
-    border-radius: 02.5px;
+    border-radius: 2.5px;
+}
+
+.explore-inner-container{
+    padding: 0 25px;
 }

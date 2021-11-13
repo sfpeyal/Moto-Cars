@@ -45,7 +45,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Your order done!');
+                    alert('Your order successfully procced, You can see your order at MY Order.');
                 }
             })
 
@@ -61,11 +61,9 @@ const Purchase = () => {
     }, [])
     return (
         <div className="purchase-container my-5">
-            <h1>this will purchase route for this id</h1>
             <Container>
-                <Row xs={1} md={3} className="g-4">
-                    <Col></Col>
-                    <Col>
+                <Row className="g-4">
+                    <Col xs={12} md={6} >
                         <Card border="0">
                             <Card.Img variant="top" src={product.picture} />
                             <Card.Body>
@@ -76,50 +74,52 @@ const Purchase = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col></Col>
+                    <Col xs={12} md={6} >
+                        <h2>Fill This Form For Complete Order</h2>
+                        <Form onSubmit={handleOrder}>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Your Name</Form.Label>
+                                <Form.Control defaultValue={user.displayName} type="text"
+                                    name="userName"
+                                    onBlur={onHandleOnBlur}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Your Email</Form.Label>
+                                <Form.Control defaultValue={user.email} type="email"
+                                    name="email"
+                                    onBlur={onHandleOnBlur}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Product Name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter Product Name"
+                                    name="productName"
+                                    onBlur={onHandleOnBlur}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Your Address</Form.Label>
+                                <Form.Control type="text" placeholder="Your Address"
+                                    name="address"
+                                    onBlur={onHandleOnBlur}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Phone Nmuber</Form.Label>
+                                <Form.Control type="number" placeholder="Phone Nmuber"
+                                    name="phone"
+                                    onBlur={onHandleOnBlur}
+                                />
+                            </Form.Group>
+                            <Button variant="primary" type="submit">
+                                Procced To Order
+                            </Button>
+                        </Form>
+                    </Col>
                 </Row>
 
-                <h1>Fill This Form For Complete Order</h1>
-                <Form onSubmit={handleOrder}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control defaultValue={user.displayName} type="text"
-                            name="userName"
-                            onBlur={onHandleOnBlur}
-                        />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control defaultValue={user.email} type="email"
-                            name="email"
-                            onBlur={onHandleOnBlur}
-                        />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Product Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Product Name"
-                            name="productName"
-                            onBlur={onHandleOnBlur}
-                        />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Your Address</Form.Label>
-                        <Form.Control type="text" placeholder="Your Address"
-                            name="address"
-                            onBlur={onHandleOnBlur}
-                        />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Phone Nmuber</Form.Label>
-                        <Form.Control type="number" placeholder="Phone Nmuber"
-                            name="phone"
-                            onBlur={onHandleOnBlur}
-                        />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+
             </Container>
 
 
